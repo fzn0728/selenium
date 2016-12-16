@@ -27,11 +27,7 @@ if __name__ == '__main__':
     time.sleep(5)
     driver.find_element_by_class_name('table ').click()
     time.sleep(5)
-        
-
-    soup = BeautifulSoup(driver.page_source,'lxml')
-    
-    
+    soup = BeautifulSoup(driver.page_source,'lxml')    
     table = soup.find('table',attrs={'class':'daily-return-table'})
     rows = table.find_all('tr')
     data = []
